@@ -5,7 +5,6 @@ const { readFileSync, readFile, writeFile } = require("fs");
 notes = require("./db/db.json");
 port = 3000;
 //=================================================================================================================================================
-console.log(notes);
 app.use(express.static("public"));
 // app.use(express.urlencoded({extended:false}))
 app.use(express.json());
@@ -19,19 +18,20 @@ app.get("/api/notes", (req, res) => {
 });
 
 app.post("/api/notes", (req, res) => {
-  console.log(req.body);
   const { id, title, text } = req.body;
+
   notes.push({
     id,
     title,
     text,
   });
-  writeFile("./db/db.json", notes, (err) => {
+
+  writeFile("./db/db.json", JSON.stringify(notes), (err) => {
     if (err) {
       console.log(err);
     }
   });
-  // return res.send('<h1>Posted</h1>')
+  return res.status(200).json(notes);
 });
 
 app.get("*", (req, res) => {
