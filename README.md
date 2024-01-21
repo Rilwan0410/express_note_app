@@ -1,4 +1,4 @@
-# 11 Express.js: Note Taker
+# Express Note App
 
 ## Description
 This is a note taking app powered by express.js using json to store all the notes, and fs.writeFile() as the tool that will add or remove data to the json file to persist and/or delete notes
