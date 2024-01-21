@@ -9,5 +9,5 @@ npm start to run express server
 
 
 ## Links
-Link to GitHub repository - https://github.com/Rilwan0410/express_note_app 
+Link to GitHub repository - https://github.com/Rilwan0410/express_note_app  
 Link to Heroku Live Website - https://rilwan-express-note-app-de8bcdf2e04e.herokuapp.com/notes 
