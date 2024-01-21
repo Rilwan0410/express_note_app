@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 const { writeFileSync, writeFile } = require("fs");
 let notes = require("./db/db.json");
-port = 3000;
+port = process.env.PORT || 3000;
 //==================================================================================================================================================
 app.use(express.static("public"));
 app.use(express.json());
